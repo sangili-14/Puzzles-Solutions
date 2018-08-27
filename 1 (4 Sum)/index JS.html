@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>put number in four div create total</title>
+	<script type="text/javascript">
+		function func()
+		{
+			 var c = 0;
+	   var d ;
+	if(document.f1.s.value!=''){
+	      if(document.f1.a.value!="")c++;
+		  else d=1;
+		  if(document.f1.b.value!="")c++;
+		  else d=2;
+		  if(document.f1.c.value!="")c++;
+		  else d=3;
+		  if(document.f1.d.value!="")c++;
+		  else d=4;
+	      if(c==3){
+		    var tot = parseInt(document.f1.s.value);
+			var x , y, z;
+		    switch(d){
+			  case 1:
+			  x=parseInt(document.f1.b.value);
+			  y=parseInt(document.f1.c.value);
+			  z=parseInt(document.f1.d.value);
+			  document.f1.a.value=tot-x-y-z;
+			  break;
+			  case 2:
+			  x=parseInt(document.f1.a.value);
+			  y=parseInt(document.f1.c.value);
+			  z=parseInt(document.f1.d.value);
+			  document.f1.b.value=tot-x-y-z;
+			  break;
+			  case 3:
+			  x=parseInt(document.f1.a.value);
+			  y=parseInt(document.f1.b.value);
+			  z=parseInt(document.f1.d.value);
+			  document.f1.c.value=tot-x-y-z;
+			  break;
+			  case 4:
+			  x=parseInt(document.f1.a.value);
+			  y=parseInt(document.f1.b.value);
+			  z=parseInt(document.f1.c.value);
+			  document.f1.d.value=tot-x-y-z;
+			  break;
+			
+			}
+		  }
+	   }else{
+         if((document.f1.a.value!="")&&(document.f1.b.value!="")&&(document.f1.c.value!="")&&(document.f1.d.value!="")){
+		   document.f1.s.value=parseInt(document.f1.a.value)+parseInt(document.f1.b.value)+parseInt(document.f1.c.value)+parseInt(document.f1.d.value);
+		 }
+	   }
+	    }
+	</script>
+</head>
+<body>
+<form name="f1">
+A:<input type="number" onKeyUp="func()" name="a"><br><br>
+B:<input type="number" onKeyUp="func()" name="b"><br><br>
+C:<input type="number" onKeyUp="func()" name="c"><br><br>
+D:<input type="number" onKeyUp="func()" name="d"><br><br>
+TOTAL:<input type="number" onKeyUp="func()" name="s">
+</form>
+</body>
+</html>

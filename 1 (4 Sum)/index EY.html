@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample 4 Sum</title>
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			var t1=0;
+			var y1=false,y2=false,y3=false,y4=false,y5=false;
+			var x1,x2,x3,x4,x5;
+			$(".a1").blur(function()
+			{
+			  x1=parseInt($(".a1").val());
+              t1++;
+              y1=true;
+              check();
+			});
+			$(".a2").blur(function()
+			{
+			  x2=parseInt($(".a2").val());
+              t1++;
+              y2=true;
+              check();
+			});
+			$(".a3").blur(function()
+			{
+			  x3=parseInt($(".a3").val());
+              t1++;
+              y3=true;
+              check();
+			});
+			$(".a4").blur(function()
+			{
+			  x4=parseInt($(".a4").val());
+              t1++;
+              y4=true;
+              check();
+			});
+			$(".a5").blur(function()
+			{
+			  x5=parseInt($(".a5").val());
+              y5=true;
+			});
+			function check()
+			{
+			if(y5==true && t1==3)
+			{
+				if(y2==true && y3==true && y4==true)
+				{
+					var ans=x5-(x2+x3+x4);
+					$(".a1").val(ans);
+				}
+				else if(y3==true && y4==true && y1==true)
+				{
+					var ans=x5-(x3+x4+x1);
+					$(".a2").val(ans);
+				}
+				else if(y4==true && y1==true && y2==true)
+				{
+					var ans=x5-(x4+x1+x2);
+					$(".a3").val(ans);
+				}
+				else  if(y1==true && y2==true && y3==true)
+				{
+					var ans=x5-(x1+x2+x3);
+					$(".a4").val(ans);
+				}
+			}
+		}
+		});
+	</script>
+</head>
+<body>
+A:<input type="text" class="a1" name="a" /><br />
+B:<input type="text" class="a2" name="b" /><br />
+C:<input type="text" class="a3" name="c" /><br />
+D:<input type="text" class="a4" name="d" /><br />
+T:<input type="text" class="a5" name="t" /><br />
+</body>
+</html>
