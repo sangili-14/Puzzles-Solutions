@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gameInDiv</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var count=0;
+			$(".d1").click(function()
+				{
+					var v1=$(".d1").text();
+					var v2=$(".d2").text();
+					var v4=$(".d4").text();
+					if(v2.length==0)
+					{
+                     $(".d2").text(v1);
+                     $(".d1").text("");
+                     $(".move").text(++count);
+                     $(".d2").css("background-color","green");
+                     $(".d1").css("background-color","black");
+					}
+					else if(v4.length==0)
+					{
+                     $(".d4").text(v1);
+                     $(".d1").text("");
+                     $(".move").text(++count);
+                     $(".d4").css("background-color","green");
+                     $(".d1").css("background-color","black");
+					}
+					
+				});
+			$(".d2").click(function()
+				{
+					var v2=$(".d2").text();
+					var v1=$(".d1").text();
+					var v3=$(".d3").text();
+					var v5=$(".d5").text();
+					if(v1.length==0)
+					{
+                     $(".d1").text(v2);
+                     $(".d2").text("");
+                     $(".move").text(++count);
+                     $(".d1").css("background-color","green");
+                     $(".d2").css("background-color","black");
+
+					}
+					else if(v3.length==0)
+					{
+					 $(".d3").text(v2);
+					 $(".d2").text("");
+					 $(".move").text(++count);
+					 $(".d3").css("background-color","green");
+					 $(".d2").css("background-color","black");
+					}
+					else if(v5.length==0)
+					{
+                      $(".d5").text(v2);
+                      $(".d2").text("");
+                      $(".move").text(++count);
+                      $(".d5").css("background-color","green");
+                      $(".d2").css("background-color","black");
+					}
+				});
+			$(".d3").click(function()
+				{
+					var v3=$(".d3").text();
+					var v2=$(".d2").text();
+					var v6=$(".d6").text();
+					if(v2.length==0)
+					{
+                     $(".d2").text(v3);
+                     $(".d3").text("");
+                     $(".move").text(++count);
+                     $(".d2").css("background-color","green");
+                     $(".d3").css("background-color","black");
+					}
+					else if(v6.length==0)
+					{
+                     $(".d6").text(v3);
+                     $(".d3").text("");
+                     $(".move").text(++count);
+                     $(".d6").css("background-color","green");
+                     $(".d3").css("background-color","black");
+					}
+					
+				});
+	          $(".d4").click(function()
+				{
+                    var v4=$(".d4").text();
+					var v1=$(".d1").text();
+					var v7=$(".d7").text();
+					var v5=$(".d5").text();
+					if(v1.length==0)
+					{
+                     $(".d1").text(v4);
+                     $(".d4").text("");
+                     $(".move").text(++count);
+                     $(".d1").css("background-color","green");
+                     $(".d4").css("background-color","black");
+
+					}
+					else if(v7.length==0)
+					{
+					 $(".d7").text(v4);
+					 $(".d4").text("");
+					 $(".move").text(++count);
+					 $(".d7").css("background-color","green");
+					 $(".d4").css("background-color","black");
+					}
+					else if(v5.length==0)
+					{
+                      $(".d5").text(v4);
+                      $(".d4").text("");
+                      $(".move").text(++count);
+                      $(".d5").css("background-color","green");
+                      $(".d4").css("background-color","black");
+					}	
+					
+     			});
+	          $(".d5").click(function()
+				{
+                    var v5=$(".d5").text();
+                    var v2=$(".d2").text();
+					var v4=$(".d4").text();
+					var v6=$(".d6").text();
+					var v8=$(".d8").text();
+					if(v2.length==0)
+					{
+                     $(".d2").text(v5);
+                     $(".d5").text("");
+                     $(".move").text(++count);
+                     $(".d2").css("background-color","green");
+                       $(".d5").css("background-color","black");
+
+					}
+					else if(v4.length==0)
+					{
+					 $(".d4").text(v5);
+					 $(".d5").text("");
+					 $(".move").text(++count);
+					 $(".d4").css("background-color","green");
+					   $(".d5").css("background-color","black");
+					}
+					else if(v6.length==0)
+					{
+                      $(".d6").text(v5);
+                      $(".d5").text("");
+                      $(".move").text(++count);
+                      $(".d6").css("background-color","green");
+                        $(".d5").css("background-color","black");
+					}
+			        else if(v8.length==0)
+					{
+                      $(".d8").text(v5);
+                      $(".d5").text("");
+                      $(".move").text(++count);
+                      $(".d8").css("background-color","green");
+                        $(".d5").css("background-color","black");
+					}
+                  
+				});
+	          $(".d6").click(function()
+				{
+                    var v6=$(".d6").text();
+					var v3=$(".d3").text();
+					var v9=$(".d9").text();
+					var v5=$(".d5").text();
+					if(v3.length==0)
+					{
+                     $(".d3").text(v6);
+                     $(".d6").text("");
+                     $(".move").text(++count);
+                     $(".d3").css("background-color","green");
+                     $(".d6").css("background-color","black");
+
+					}
+					else if(v9.length==0)
+					{
+					 $(".d9").text(v6);
+					 $(".d6").text("");
+					 $(".move").text(++count);
+					 $(".d9").css("background-color","green");
+					 $(".d6").css("background-color","black");
+					}
+					else if(v5.length==0)
+					{
+                      $(".d5").text(v6);
+                      $(".d6").text("");
+                      $(".move").text(++count);
+                      $(".d5").css("background-color","green");
+                      $(".d6").css("background-color","black");
+					}
+					
+				});
+	          $(".d7").click(function()
+				{
+					var v7=$(".d7").text();
+					var v8=$(".d8").text();
+					var v4=$(".d4").text();
+					if(v8.length==0)
+					{
+                     $(".d8").text(v7);
+                     $(".d7").text("");
+                     $(".move").text(++count);
+                     $(".d8").css("background-color","green");
+                     $(".d7").css("background-color","black");
+					}
+					else if(v4.length==0)
+					{
+                     $(".d4").text(v7);
+                     $(".d7").text("");
+                     $(".move").text(++count);
+                     $(".d4").css("background-color","green");
+                     $(".d7").css("background-color","black");
+					}
+					
+				});
+	          $(".d8").click(function()
+				{
+                    var v8=$(".d8").text();
+					var v9=$(".d9").text();
+					var v7=$(".d7").text();
+					var v5=$(".d5").text();
+					if(v9.length==0)
+					{
+                     $(".d9").text(v8);
+                     $(".d8").text("");
+                     $(".move").text(++count);
+                     $(".d9").css("background-color","green");
+                     $(".d8").css("background-color","black");
+
+					}
+					else if(v7.length==0)
+					{
+					 $(".d7").text(v8);
+					 $(".d8").text("");
+					 $(".move").text(++count);
+					 $(".d7").css("background-color","green");
+					 $(".d8").css("background-color","black");
+					}
+					else if(v5.length==0)
+					{
+                      $(".d5").text(v8);
+                      $(".d8").text("");
+                      $(".move").text(++count);
+                      $(".d5").css("background-color","green");
+                      $(".d8").css("background-color","black");
+					}
+					
+				});
+	          $(".d9").click(function()
+				{
+					var v9=$(".d9").text();
+					var v6=$(".d6").text();
+					var v8=$(".d8").text();
+					if(v6.length==0)
+					{
+                     $(".d6").text(v9);
+                     $(".d9").text("");
+                     $(".move").text(++count);
+                     $(".d6").css("background-color","green");
+                     $(".d9").css("background-color","black");
+					}
+					else if(v8.length==0)
+					{
+                     $(".d8").text(v9);
+                     $(".d9").text("");
+                     $(".move").text(++count);
+                     $(".d8").css("background-color","green");
+                     $(".d9").css("background-color","black");
+					}
+			
+				});
+	          $(".FINISH").click(function(){
+	          		if($(".d1").text()=="1" && $(".d2").text()=="2" && $(".d3").text()=="3" && $(".d4").text()=="4" && $(".d5").text()=="5" && $(".d6").text()=="6" && $(".d7").text()=="7" && $(".d8").text()=="8")
+                      {           
+                       // alert("you are score  "+$(".move").text());
+                        $(".win").text("''wow...You successfully complete with in  "+$(".move").text()+"    move''")
+                        $(".table").hide(); 
+                        $(".RETRY").hide(); 
+                        $(".FINISH").text("Play Again");
+                         $(".FINISH").click(function(){
+                                   location.reload();
+                         	});
+                                  
+                      }
+                      });
+	          $(".RETRY").click(function(){
+
+	          	location.reload();
+	          });
+
+		});
+
+	</script>
+	<style type="text/css">
+	.head {
+		padding: 2%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #DD5721;
+        text-align: center;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px lightblue;
+        width: 50%;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       }
+       	.tab {
+       		border-radius: 25px;
+		padding: 2%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #CADA09;
+        width: 35%;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       }
+		.box {
+			width: 50px;
+			height: 50px;
+			background-color: #3A740C   ;
+			color: black;
+			border-style: solid;
+			text-align: center;
+		}
+		.box:hover { 
+        background-color: yellow;
+    }
+       body {
+    	background-color: #DD2121;
+    	color: black;
+    }
+    .win {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+   .d8 {
+   	background-color: black;
+   }
+
+
+
+	</style>
+
+</head>
+<body>
+    	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab">PLAYERS</a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab is-active">BATTLE FIELD</a>
+      <a href="#fixed-tab-3" class="mdl-layout__tab">ABOUT</a>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel" id="fixed-tab-1">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-2">
+      <div class="page-content"><!-- Your content goes here -->
+      	<br><br><div class="head">
+		<h3>Your Moves: <span class="move" style="color: #74DD21  ">0</span></h3></div><br><br>
+		<div class="tab">
+			<center>
+				<h3 class="win"></h3>
+        <table border="2" class="table">
+	<tr>
+		<td><div class="d1 box" id="i">5</div></td>
+			<td><div class="d2 box">8</div></td>
+				<td><div class="d3 box">3</div></td>
+	</tr>
+	<tr>
+		<td><div class="d4 box">2</div></td>
+			<td><div class="d5 box">7</div></td>
+				<td><div class="d6 box">4</div></td>
+	</tr>
+	<tr>
+		<td><div class="d7 box">6</div></td>
+			<td><div class="d8 box"></div></td>
+				<td><div class="d9 box">1</div></td>
+	</tr>
+    </table><br>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent FINISH">
+  <b>FINISH</b>
+</button>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent RETRY">
+  <b>RETRY</b>
+</button></center>
+</div>
+</div>
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+      <div class="page-content"><!-- Your content gsgsgoes here --></div>
+    </section>
+  </main>
+</div>
+    	
+</body>
+</html>

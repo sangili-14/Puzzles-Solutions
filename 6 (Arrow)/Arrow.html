@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code puzzle</title>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<style type="text/css">
+		#box {
+			
+			transform: translate3d(50px,50px,0);
+			transition: .8s ease-in;
+			position: relative;
+		
+		}
+
+	</style>
+
+<script>
+$( document ).on( "click", function( event ) {
+var box=$("#box");
+var x=event.pageX;
+var y=event.pageY;
+box.css('transform', 'translate3d('+x+'px,'+y+'px, 0)');
+box.hide(1000);
+setTimeout(function(){
+	box.css('transform', 'translate3d(20px,20px,0)');
+	box.show();
+  }, 1500);
+// box.show(1000);
+});
+</script>
+</head>
+<body>
+<img src="bow.png" alt="arrow" height="100" width="100"/><span id="box"><img src="arrow.png" height="42" width="32"></span>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>move</title>
+	<style type="text/css">
+		#d {
+			width:100px;
+			height:100px;
+			position: fixed;
+		    /*transform: translate3d(0px,0px,0);*/
+			transition: .8s ease-out;
+			display: none;
+		
+		}
+		body {s
+			background-image: url('f.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;	
+
+				}
+	</style>
+	<script type="text/javascript">
+		document.addEventListener("click",(event)=>{
+        document.getElementById('d').style.display="block";
+         document.getElementById('d').style.top=event.pageY+"px";
+         document.getElementById('d').style.left=event.pageX+"px";
+         setTimeout(function(){
+         	document.getElementById('d').style.top="95%";
+             setTimeout(function(){
+                      document.getElementById('d').style.display="none";}, 1000);
+          }, 100);
+		});
+		
+	</script>
+</head>
+<body>
+<img src="stone.png" id="d" alt="fwe">
+</body>
+</html>
