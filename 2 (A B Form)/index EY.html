@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Form</title>
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var ar=new Array();
+			$(".b1").click(function()
+			{
+				var x=$(".v1").val();
+				$(".i1").append(x+"<br>");
+				ar.push(x);
+			});
+			$(".b2").click(function()
+			{
+				var x1=$(".v2").val();
+				$(".i2").append(x1+"<br>");
+				for(var i=0;i<ar.length;i++)
+				{
+					var sum=parseInt(x1)+parseInt(ar[i]);
+					if(parseInt(sum)>=100)
+					{
+						$(".ans").append(x1+"+"+ar[i]+"="+sum+"<br>");
+					}
+				}
+			});
+
+		});
+	</script>
+</head>
+<body>
+  Input1:<input type="text" name="a" class="v1">
+  <input type="button" name="a1" value="submit" class="b1">
+  <p class="i1"></p>
+  Input2:<input type="text" name="b" class="v2">
+  <input type="button" name="a1" value="submit" class="b2">
+  <p class="i2"></p>
+  <br>
+  <br>
+  <br>
+  <h1 class="ans"></h1>
+</body>
+</html>
